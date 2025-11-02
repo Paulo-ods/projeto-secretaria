@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentoria para Secretárias | [Nome da Mentora]</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Hero Section -->
+  <header class="bg-indigo-600 text-white py-20 px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforme sua carreira de secretária</h1>
+    <p class="text-lg mb-6">Mentoria personalizada com [Nome da Mentora] para desenvolver habilidades e alcançar novos resultados.</p>
+    <a href="#contato" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">Quero ser mentorada</a>
+  </header>
+
+  <!-- Sobre a Mentora -->
+  <section class="py-16 px-6 md:px-20 text-center">
+    <img src="https://via.placeholder.com/150" alt="Mentora" class="w-32 h-32 mx-auto rounded-full mb-6 shadow-lg">
+    <h2 class="text-3xl font-bold mb-3">Sobre [Nome da Mentora]</h2>
+    <p class="max-w-2xl mx-auto text-gray-600">
+      Com mais de 10 anos de experiência na área administrativa, [Nome da Mentora] ajuda secretárias a desenvolverem postura profissional, organização e comunicação de alto impacto.
+    </p>
+  </section>
+
+  <!-- Benefícios -->
+  <section class="bg-gray-50 py-16 px-6 md:px-20">
+    <h2 class="text-3xl font-bold text-center mb-10">O que você vai aprender</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">Gestão de Tempo</h3>
+        <p class="text-gray-600">Aprenda técnicas eficazes para equilibrar demandas e otimizar sua produtividade diária.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">Comunicação Profissional</h3>
+        <p class="text-gray-600">Desenvolva habilidades de comunicação e etiqueta corporativa para se destacar.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="font-semibold text-xl mb-2">Postura e Liderança</h3>
+        <p class="text-gray-600">Fortaleça sua presença profissional e torne-se referência na sua empresa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-16 px-6 md:px-20 text-center">
+    <h2 class="text-3xl font-bold mb-10">O que dizem as mentoradas</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="bg-indigo-50 p-6 rounded-2xl shadow">
+        <p class="italic text-gray-700">"A mentoria me ajudou a conquistar reconhecimento e segurança no trabalho."</p>
+        <p class="mt-4 font-semibold">– Ana Souza</p>
+      </div>
+      <div class="bg-indigo-50 p-6 rounded-2xl shadow">
+        <p class="italic text-gray-700">"Hoje sou mais organizada e confiante. Essa experiência transformou minha rotina."</p>
+        <p class="mt-4 font-semibold">– Carla Mendes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada para Ação -->
+  <section id="contato" class="bg-indigo-600 text-white py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Pronta para o próximo passo?</h2>
+    <p class="mb-8">Preencha o formulário abaixo e dê início à sua transformação profissional.</p>
+    <form id="leadForm" class="max-w-md mx-auto bg-white text-gray-800 p-6 rounded-2xl shadow">
+      <input type="text" placeholder="Seu nome" class="w-full mb-4 p-3 border rounded" required>
+      <input type="email" placeholder="Seu e-mail" class="w-full mb-4 p-3 border rounded" required>
+      <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded hover:bg-indigo-700 transition">Quero participar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
+    <p>© 2025 [Nome da Mentora] – Todos os direitos reservados.</p>
+    <div class="mt-3 space-x-4">
+      <a href="#" class="hover:text-white">Instagram</a>
+      <a href="#" class="hover:text-white">LinkedIn</a>
+      <a href="#" class="hover:text-white">WhatsApp</a>
+    </div>
+  </footer>
+
+  <!-- Script Simples para Formulário -->
+  <script>
+    document.getElementById("leadForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Obrigada por se inscrever! Entraremos em contato em breve.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
