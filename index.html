@@ -7,14 +7,67 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans text-gray-800">
-
+<!--#82466D-->
   <!-- Hero Section -->
-<header class="text-white py-20 px-6 text-center bg-cover" 
-        style="background: url('img/fundo-desktop.png') no-repeat center;">
+<!-- Navbar -->
+<nav class="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="img/logo.png" alt="Logo da Mentora" class="w-10 h-10 rounded-full">
+      <span class="font-bold text-xl text-[#82466D]">Mentoria Taynara</span>
+    </div>
 
-    <h1 class="text-4xl md:text-5xl font-bold mb-4" style="text-shadow: 0px 0px 8px black;">Transforme sua carreira de secretária</h1>
-    <p class="text-lg mb-6">Mentoria personalizada com [Nome da Mentora] para desenvolver habilidades e alcançar novos resultados.</p>
-    <a href="#contato" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">Quero ser mentorada</a>
+    <!-- Menu (Desktop) -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <li><a href="#sobre" class="hover:text-[#82466D] transition">Sobre</a></li>
+      <li><a href="#conteudo" class="hover:text-[#82466D] transition">Conteúdo</a></li>
+      <li><a href="#agenda" class="hover:text-[#82466D] transition">Agenda</a></li>
+      <li><a href="#feedback" class="hover:text-[#82466D] transition">Feedback</a></li>
+      <li><a href="#contato" class="hover:text-[#82466D] transition">Contato</a></li>
+    </ul>
+
+    <!-- Botão hamburguer (Mobile) -->
+    <button id="menuBtn" class="md:hidden focus:outline-none">
+      <svg class="w-7 h-7 text-[#82466D]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+    <ul class="flex flex-col text-center py-4 space-y-3 font-medium text-gray-700">
+      <li><a href="#sobre" class="block hover:text-[#82466D]">Sobre</a></li>
+      <li><a href="#conteudo" class="block hover:text-[#82466D]">Conteúdo</a></li>
+      <li><a href="#agenda" class="block hover:text-[#82466D]">Agenda</a></li>
+      <li><a href="#feedback" class="block hover:text-[#82466D]">Feedback</a></li>
+      <li><a href="#contato" class="block hover:text-[#82466D]">Contato</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<header class="text-white py-16 px-6 text-center bg-cover flex flex-col md:flex-row " style="background-color: #82466D;">
+        <!-- style="background: url('img/fundo-desktop.png') no-repeat center;"> -->
+
+    <div class="m-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4" >
+        Transforme sua carreira de secretária
+      </h1>
+      <p class="text-lg mb-6">
+        Mentoria personalizada com Taynara para desenvolver habilidades e alcançar novos resultados
+      </p>
+      <a href="#contato" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
+        Quero ser mentorada
+      </a>
+    </div>
+
+    <div class="mx-auto mt-8 md:mt-0">
+      <img src="img/logo-abelha-TR-2025[1].png" alt="abelha">
+    </div>
+
   </header>
 
   <!-- Sobre a Mentora -->
@@ -136,6 +189,13 @@
       alert("Obrigada por se inscrever! Entraremos em contato em breve.");
       this.reset();
     });
+
+      const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
   </script>
 </body>
 </html>
