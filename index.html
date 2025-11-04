@@ -3,178 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mentoria para Secretárias | [Nome da Mentora]</title>
+  <title>Mentoria para Secretárias | Taynara Mentora</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body class="font-sans text-gray-800">
-<!--#82466D-->
-  <!-- Hero Section -->
-<!-- Navbar -->
-<nav class="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-    
-    <!-- Logo -->
-    <div class="flex items-center space-x-2">
-      <img src="img/logo.png" alt="Logo da Mentora" class="w-10 h-10 rounded-full">
-      <span class="font-bold text-xl text-[#82466D]">Mentoria Taynara</span>
+  
+  <!-- Navbar -->
+  <nav class="w-full bg-white/90 backdrop-blur-md shadow-md fixed top-0 left-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center space-x-2">
+        <img src="img/logo-abelha-TR-2025[1].png" alt="Logo da Mentora" class="w-10 h-10 rounded-full">
+        <span class="font-bold text-xl text-[#82466D]">Mentoria Taynara</span>
+      </div>
+
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li><a href="#sobre" class="hover:text-[#82466D] transition">Sobre</a></li>
+        <li><a href="#conteudo" class="hover:text-[#82466D] transition">Conteúdo</a></li>
+        <li><a href="#paraquem" class="hover:text-[#82466D] transition">Para quem</a></li>
+        <li><a href="#agenda" class="hover:text-[#82466D] transition">Agenda</a></li>
+        <li><a href="#feedback" class="hover:text-[#82466D] transition">Feedback</a></li>
+        <li><a href="#contato" class="hover:text-[#82466D] transition">Contato</a></li>
+      </ul>
+
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg class="w-7 h-7 text-[#82466D]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
 
-    <!-- Menu (Desktop) -->
-    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
-      <li><a href="#sobre" class="hover:text-[#82466D] transition">Sobre</a></li>
-      <li><a href="#conteudo" class="hover:text-[#82466D] transition">Conteúdo</a></li>
-      <li><a href="#agenda" class="hover:text-[#82466D] transition">Agenda</a></li>
-      <li><a href="#feedback" class="hover:text-[#82466D] transition">Feedback</a></li>
-      <li><a href="#contato" class="hover:text-[#82466D] transition">Contato</a></li>
-    </ul>
-
-    <!-- Botão hamburguer (Mobile) -->
-    <button id="menuBtn" class="md:hidden focus:outline-none">
-      <svg class="w-7 h-7 text-[#82466D]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Menu Mobile -->
-  <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
-    <ul class="flex flex-col text-center py-4 space-y-3 font-medium text-gray-700">
-      <li><a href="#sobre" class="block hover:text-[#82466D]">Sobre</a></li>
-      <li><a href="#conteudo" class="block hover:text-[#82466D]">Conteúdo</a></li>
-      <li><a href="#agenda" class="block hover:text-[#82466D]">Agenda</a></li>
-      <li><a href="#feedback" class="block hover:text-[#82466D]">Feedback</a></li>
-      <li><a href="#contato" class="block hover:text-[#82466D]">Contato</a></li>
-    </ul>
-  </div>
-</nav>
-
-
-<header class="text-white py-16 px-6 text-center bg-cover flex flex-col md:flex-row " style="background-color: #82466D;">
-        <!-- style="background: url('img/fundo-desktop.png') no-repeat center;"> -->
-
-    <div class="m-auto">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4" >
-        Transforme sua carreira de secretária
-      </h1>
-      <p class="text-lg mb-6">
-        Mentoria personalizada com Taynara para desenvolver habilidades e alcançar novos resultados
-      </p>
-      <a href="#contato" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition">
-        Quero ser mentorada
-      </a>
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+      <ul class="flex flex-col text-center py-4 space-y-3 font-medium text-gray-700">
+        <li><a href="#sobre" class="block hover:text-[#82466D]">Sobre</a></li>
+        <li><a href="#conteudo" class="block hover:text-[#82466D]">Conteúdo</a></li>
+        <li><a href="#paraquem" class="block hover:text-[#82466D]">Para quem</a></li>
+        <li><a href="#agenda" class="block hover:text-[#82466D]">Agenda</a></li>
+        <li><a href="#feedback" class="block hover:text-[#82466D]">Feedback</a></li>
+        <li><a href="#contato" class="block hover:text-[#82466D]">Contato</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="mx-auto mt-8 md:mt-0">
-      <img src="img/logo-abelha-TR-2025[1].png" alt="abelha">
+  <!-- Hero -->
+  <header class="text-white py-24 px-6 text-center bg-cover bg-center flex flex-col md:flex-row justify-center items-center"
+    style="background: linear-gradient(to bottom, #82466D, #5c2f4b); margin-top:70px;">
+    <div class="m-auto fade-in">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforme sua carreira de secretária</h1>
+      <p class="text-lg mb-6">Mentoria personalizada com Taynara para desenvolver habilidades e alcançar novos resultados</p>
+      <a href="#contato" class="bg-white text-[#82466D] font-semibold px-8 py-3 rounded-full shadow hover:bg-gray-100 transition">Quero ser mentorada</a>
     </div>
-
+    <div class="mx-auto mt-8 md:mt-0 fade-in">
+      <img src="img/logo-abelha-TR-2025[1].png" alt="abelha" class="w-48 md:w-64">
+    </div>
   </header>
 
-  <!-- Sobre a Mentora -->
-  <section class="py-16 px-6 md:px-20 text-center">
-    <img src="https://img.freepik.com/fotos-gratis/retrato-de-um-sorrindo-jovem-executiva-segurando-oculos-em-mao-olhando-camera_23-2147943723.jpg?semt=ais_incoming&w=740&q=80" alt="Mentora" class="w-32 h-32 mx-auto rounded-full mb-6 shadow-lg">
-    <h2 class="text-3xl font-bold mb-3">Sobre Taynara</h2>
+  <!-- Sobre -->
+  <section id="sobre" class="py-20 px-6 md:px-20 text-center fade-in">
+    <img src="https://img.freepik.com/fotos-gratis/retrato-de-um-sorrindo-jovem-executiva-segurando-oculos-em-mao-olhando-camera_23-2147943723.jpg?w=740&q=80" alt="Mentora" class="w-32 h-32 mx-auto rounded-full mb-6 shadow-lg">
+    <h2 class="text-3xl font-bold mb-3 text-[#82466D]">Sobre Taynara</h2>
     <p class="max-w-2xl mx-auto text-gray-600">
-      Com mais de 10 anos de experiência na área administrativa, Taynara ajuda secretárias a desenvolverem postura profissional, organização e comunicação de alto impacto.
+      Com mais de 10 anos de experiência na área administrativa, Taynara ajuda secretárias a se destacarem com postura, organização e comunicação de alto impacto. Sua mentoria combina técnica, empatia e estratégias reais do mundo corporativo.
     </p>
   </section>
 
-  <!-- Benefícios -->
-  <section class="bg-gray-50 py-16 px-6 md:px-20">
-    <h2 class="text-3xl font-bold text-center mb-10">O que você vai aprender</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Gestão de Tempo</h3>
-        <p class="text-gray-600">Aprenda técnicas eficazes para equilibrar demandas e otimizar sua produtividade diária.</p>
+  <!-- Para quem é -->
+  <section id="paraquem" class="bg-gray-50 py-20 px-6 md:px-20 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-10 text-[#82466D]">Para quem é essa mentoria</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold text-xl mb-2">Secretárias iniciantes</h3>
+        <p class="text-gray-600">Que desejam entender as boas práticas e construir uma base sólida para crescer com confiança.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Comunicação Profissional</h3>
-        <p class="text-gray-600">Desenvolva habilidades de comunicação e etiqueta corporativa para se destacar.</p>
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold text-xl mb-2">Profissionais experientes</h3>
+        <p class="text-gray-600">Que querem reposicionar sua imagem, aperfeiçoar processos e alcançar cargos de maior destaque.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-2">Postura e Liderança</h3>
-        <p class="text-gray-600">Fortaleça sua presença profissional e torne-se referência na sua empresa.</p>
+      <div class="bg-white p-6 rounded-2xl shadow">
+        <h3 class="font-semibold text-xl mb-2">Empresas e líderes</h3>
+        <p class="text-gray-600">Que buscam treinar suas equipes administrativas com técnicas modernas de organização e gestão.</p>
       </div>
     </div>
   </section>
 
-  <!-- Agenda da Mentora -->
-<section class="py-16 px-6 md:px-20 bg-gradient-to-b from-white to-indigo-50 text-center">
-  <h2 class="text-3xl font-bold mb-10">Agenda da Mentora</h2>
-  <p class="text-gray-600 max-w-2xl mx-auto mb-12">
-    Fique por dentro dos próximos encontros, workshops e mentorias em grupo conduzidos por Taynara.
-    Todos os eventos são oportunidades únicas para ampliar seus conhecimentos e trocar experiências.
-  </p>
+  <!-- Conteúdo -->
+<!-- Conteúdo / Aprendizado -->
+<section id="conteudo" class="relative overflow-hidden py-24 px-6 md:px-20 text-white bg-gradient-to-b from-[#82466D] to-[#5c2f4b] fade-in">
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')] opacity-10"></div>
 
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <!-- Evento 1 -->
-    <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 hover:shadow-lg transition-all duration-300">
-      <div class="flex items-center justify-center mb-4 text-indigo-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v11a2 2 0 002 2z" />
-        </svg>
+  <div class="relative z-10 max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-10">O que você vai aprender</h2>
+    <p class="max-w-2xl mx-auto text-lg text-gray-100 mb-16">
+      Cada módulo da mentoria foi desenhado para transformar sua rotina profissional, unindo teoria e prática com foco em resultados reais.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:scale-105 transition-transform duration-300 shadow-lg">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white/20 p-4 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v11a2 2 0 002 2z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Gestão de Tempo e Foco</h3>
+        <p class="text-gray-200">Aprenda a dominar suas tarefas com técnicas práticas para organização e produtividade no dia a dia corporativo.</p>
       </div>
-      <h3 class="font-semibold text-xl mb-2">Workshop: Gestão do Tempo</h3>
-      <p class="text-gray-600 mb-3">10 de novembro de 2025 — Online e gratuito.</p>
-      <a href="#contato" class="text-indigo-600 font-medium hover:underline">Quero participar</a>
+
+      <!-- Card 2 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:scale-105 transition-transform duration-300 shadow-lg">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white/20 p-4 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-3-3h-2V9a7 7 0 00-14 0v6a3 3 0 003 3h5v2h6z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Comunicação de Alto Impacto</h3>
+        <p class="text-gray-200">Desenvolva postura, linguagem e empatia para se comunicar com confiança e clareza em qualquer ambiente.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:scale-105 transition-transform duration-300 shadow-lg">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white/20 p-4 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Postura e Liderança</h3>
+        <p class="text-gray-200">Fortaleça sua presença profissional, desenvolva mentalidade de liderança e torne-se inspiração na sua empresa.</p>
+      </div>
     </div>
 
-    <!-- Evento 2 -->
-    <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 hover:shadow-lg transition-all duration-300">
-      <div class="flex items-center justify-center mb-4 text-indigo-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.104 0-2 .896-2 2v8a2 2 0 002 2h4a2 2 0 002-2v-8a2 2 0 00-2-2h-4zm0 0V6a2 2 0 012-2h4a2 2 0 012 2v2" />
-        </svg>
-      </div>
-      <h3 class="font-semibold text-xl mb-2">Aula Especial: Comunicação Assertiva</h3>
-      <p class="text-gray-600 mb-3">15 de novembro de 2025 — Via Zoom (vagas limitadas).</p>
-      <a href="#contato" class="text-indigo-600 font-medium hover:underline">Inscreva-se agora</a>
-    </div>
-
-    <!-- Evento 3 -->
-    <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 hover:shadow-lg transition-all duration-300">
-      <div class="flex items-center justify-center mb-4 text-indigo-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-3-3h-2V9a7 7 0 00-14 0v6a3 3 0 003 3h5v2h6z" />
-        </svg>
-      </div>
-      <h3 class="font-semibold text-xl mb-2">Encontro Presencial: Networking e Carreira</h3>
-      <p class="text-gray-600 mb-3">22 de novembro de 2025 — São Paulo - SP.</p>
-      <a href="#contato" class="text-indigo-600 font-medium hover:underline">Reservar minha vaga</a>
+    <!-- CTA suave -->
+    <div class="mt-16">
+      <a href="#contato" class="bg-white text-[#82466D] font-semibold px-8 py-4 rounded-full shadow hover:bg-gray-100 transition">Quero começar agora</a>
     </div>
   </div>
 </section>
 
 
-  <!-- Depoimentos -->
-  <section class="py-16 px-6 md:px-20 text-center">
-    <h2 class="text-3xl font-bold mb-10">O que dizem as mentoradas</h2>
+  <!-- Certificações -->
+  <section class="bg-gradient-to-b from-[#f9f6f7] to-[#e8d9e0] py-16 px-6 md:px-20 text-center fade-in">
+    <h2 class="text-3xl font-bold mb-10 text-[#82466D]">Certificações e Parcerias</h2>
+    <div class="flex flex-wrap justify-center items-center gap-8 opacity-80">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_UNESP.svg" class="h-10" alt="Parceiro 1">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Logo_Sebrae.svg" class="h-10" alt="Parceiro 2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Faesa_logo.png" class="h-10" alt="Parceiro 3">
+    </div>
+  </section>
+
+  <!-- Como Funciona a Mentoria -->
+<section class="py-20 px-6 md:px-20 bg-gradient-to-b from-[#fdf9fb] to-[#f5e6ee] text-center relative overflow-hidden">
+  <h2 class="text-3xl font-bold mb-12 text-[#82466D]">Como funciona a mentoria</h2>
+  
+  <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-10 relative">
+    
+    <!-- Linha de progresso (aparece só em telas grandes) -->
+    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-[#e5cadd] transform -translate-y-1/2 z-0"></div>
+    
+    <!-- Etapa 1 -->
+    <div class="relative z-10">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#82466D] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
+        1
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Inscrição</h3>
+      <p class="text-gray-600">Você preenche o formulário e garante sua vaga na próxima turma.</p>
+    </div>
+
+    <!-- Etapa 2 -->
+    <div class="relative z-10">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#9e5d87] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
+        2
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Diagnóstico</h3>
+      <p class="text-gray-600">Taynara faz uma análise personalizada do seu momento profissional.</p>
+    </div>
+
+    <!-- Etapa 3 -->
+    <div class="relative z-10">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#b775a1] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
+        3
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Encontros</h3>
+      <p class="text-gray-600">Mentorias ao vivo e atividades práticas para desenvolver suas habilidades.</p>
+    </div>
+
+    <!-- Etapa 4 -->
+    <div class="relative z-10">
+      <div class="w-16 h-16 mx-auto mb-4 bg-[#d48fc0] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
+        4
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Transformação</h3>
+      <p class="text-gray-600">Ao final, você estará pronta para se destacar e conquistar novas oportunidades.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Feedback -->
+  <section id="feedback" class="py-20 px-6 md:px-20 text-center fade-in">
+    <h2 class="text-3xl font-bold mb-10 text-[#82466D]">O que dizem as mentoradas</h2>
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <div class="bg-indigo-50 p-6 rounded-2xl shadow">
         <p class="italic text-gray-700">"A mentoria me ajudou a conquistar reconhecimento e segurança no trabalho."</p>
-        <p class="mt-4 font-semibold">– Ana Souza</p>
+        <p class="mt-4 font-semibold text-[#82466D]">– Ana Souza</p>
       </div>
       <div class="bg-indigo-50 p-6 rounded-2xl shadow">
         <p class="italic text-gray-700">"Hoje sou mais organizada e confiante. Essa experiência transformou minha rotina."</p>
-        <p class="mt-4 font-semibold">– Carla Mendes</p>
+        <p class="mt-4 font-semibold text-[#82466D]">– Carla Mendes</p>
       </div>
     </div>
   </section>
 
-  <!-- Chamada para Ação -->
-  <section id="contato" class="bg-indigo-600 text-white py-20 px-6 text-center">
+  <!-- Contato -->
+  <section id="contato" class="text-white py-20 px-6 text-center fade-in" style="background: linear-gradient(to bottom, #82466D, #50253f);">
     <h2 class="text-3xl font-bold mb-4">Pronta para o próximo passo?</h2>
     <p class="mb-8">Preencha o formulário abaixo e dê início à sua transformação profissional.</p>
     <form id="leadForm" class="max-w-md mx-auto bg-white text-gray-800 p-6 rounded-2xl shadow">
       <input type="text" placeholder="Seu nome" class="w-full mb-4 p-3 border rounded" required>
       <input type="email" placeholder="Seu e-mail" class="w-full mb-4 p-3 border rounded" required>
-      <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded hover:bg-indigo-700 transition">Quero participar</button>
+      <textarea placeholder="Deixe sua mensagem ou dúvida" class="w-full mb-4 p-3 border rounded"></textarea>
+      <button type="submit" class="w-full bg-[#82466D] text-white font-semibold py-3 rounded hover:bg-[#5c2f4b] transition">Quero participar</button>
     </form>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
-    <p>© 2025 [Nome da Mentora] – Todos os direitos reservados.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8 text-center text-sm">
+    <p>© 2025 Mentoria Taynara — Todos os direitos reservados.</p>
     <div class="mt-3 space-x-4">
       <a href="#" class="hover:text-white">Instagram</a>
       <a href="#" class="hover:text-white">LinkedIn</a>
@@ -182,20 +245,21 @@
     </div>
   </footer>
 
-  <!-- Script Simples para Formulário -->
   <script>
-    document.getElementById("leadForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("Obrigada por se inscrever! Entraremos em contato em breve.");
-      this.reset();
-    });
+    // Menu mobile
+    const btn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-      const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
+    // Animações suaves com IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
