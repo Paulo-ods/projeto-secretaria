@@ -68,19 +68,39 @@
   </div>
 
   <div class="mx-auto mt-8 md:mt-0 fade-in">
-    <img src="img/logo-abelha-TR-2025[1].png" alt="abelha" class="w-40 md:w-64">
+    <img src="img/logo-abelha-TR-2025[1].png" alt="abelha" class="w-44 md:w-64">
   </div>
 </header>
 
 
   <!-- Sobre -->
-  <section id="sobre" class="py-20 px-6 md:px-20 text-center fade-in">
-    <img src="https://img.freepik.com/fotos-gratis/retrato-de-um-sorrindo-jovem-executiva-segurando-oculos-em-mao-olhando-camera_23-2147943723.jpg?w=740&q=80" alt="Mentora" class="w-32 h-32 mx-auto rounded-full mb-6 shadow-lg">
-    <h2 class="text-3xl font-bold mb-3 text-[#82466D]">Sobre Taynara</h2>
-    <p class="max-w-2xl mx-auto text-gray-600">
-      Com mais de 10 anos de experiência na área administrativa, Taynara ajuda secretárias a se destacarem com postura, organização e comunicação de alto impacto. Sua mentoria combina técnica, empatia e estratégias reais do mundo corporativo.
-    </p>
-  </section>
+<section id="sobre" class="py-20 px-6 md:px-20 fade-in bg-white">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-10 text-center md:text-left">
+    
+    <!-- FOTO -->
+    <div class="relative">
+      <div class="absolute inset-0 rounded-full border-4 border-[#D6C48E] blur-[1px]"></div> <!-- detalhe dourado -->
+      <img src="https://img.freepik.com/fotos-gratis/retrato-de-um-sorrindo-jovem-executiva-segurando-oculos-em-mao-olhando-camera_23-2147943723.jpg?w=740&q=80"
+           alt="Mentora"
+           class="relative w-44 h-44 md:w-56 md:h-56 rounded-full shadow-lg object-cover mx-auto md:mx-0">
+    </div>
+
+    <!-- TEXTO -->
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#82466D]">
+        Sobre <span class="text-[#D6C48E]">Taynara</span>
+      </h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Com mais de <span class="font-semibold text-[#82466D]">10 anos de experiência</span> na área administrativa, 
+        Taynara ajuda secretárias a se destacarem com postura, organização e comunicação de alto impacto. 
+        Sua mentoria combina <span class="text-[#D6C48E] font-medium">técnica, empatia</span> e 
+        <span class="text-[#D6C48E] font-medium">estratégias reais</span> do mundo corporativo.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Para quem é -->
 <!-- Para quem é essa mentoria -->
@@ -191,9 +211,9 @@
     </div>
   </div>
 </section>
-
+<!-- bg-gradient-to-b from-[#f9f6f7] to-[#e8d9e0] fade-in-->
 <!-- Treinamento para Secretárias -->
-<section id="treinamento" class="py-20 px-6 md:px-20 bg-gradient-to-b from-[#f9f6f7] to-[#e8d9e0] fade-in">
+<section id="treinamento" class="py-20 px-6 md:px-20 bg-[#faf8f5]">
   <div class="max-w-5xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-6 text-[#82466D]">Treinamento para Secretárias</h2>
     <p class="text-gray-700 mb-8 leading-relaxed">
@@ -239,8 +259,8 @@
 </section>
 
 <!-- COMO FUNCIONA A MENTORIA -->
-<section id="como-funciona" class="py-20 px-6 md:px-20 bg-[#faf8f5] text-center">
-  <h2 class="text-3xl font-bold mb-10 text-[#82466D]">Como funciona a mentoria</h2>
+<section id="como-funciona" class="py-20 px-6 md:px-20  text-center bg-[#5c2f4b21]">
+  <h2 class="text-3xl font-bold mb-10 text-[#82466D] ">Como funciona a mentoria</h2>
 
   <p class="text-gray-600 max-w-3xl mx-auto mb-12 hidden md:block">
     O programa foi criado para guiar você passo a passo em um processo prático e inspirador.
@@ -293,20 +313,49 @@
 </section>
 
 
-  <!-- Feedback -->
-  <section id="feedback" class="py-20 px-6 md:px-20 text-center fade-in">
-    <h2 class="text-3xl font-bold mb-10 text-[#82466D]">O que dizem as mentoradas</h2>
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      <div class="bg-indigo-50 p-6 rounded-2xl shadow">
-        <p class="italic text-gray-700">"A mentoria me ajudou a conquistar reconhecimento e segurança no trabalho."</p>
+<!-- Feedback -->
+<section id="feedback" class="py-20 px-6 md:px-20 text-center fade-in bg-gradient-to-b from-[#f9f6f2] to-white">
+  <div class="max-w-5xl mx-auto">
+    <!-- Título com detalhe dourado -->
+    <h2 class="text-3xl md:text-4xl font-bold text-[#82466D] mb-4 relative inline-block">
+      O que dizem as <span class="text-[#D6C48E]">mentoradas</span>
+      <span class="block w-20 h-[3px] bg-[#D6C48E] mx-auto mt-2 rounded-full"></span>
+    </h2>
+
+    <!-- Subtítulo -->
+    <p class="text-gray-600 max-w-xl mx-auto mb-12">
+      Depoimentos reais de mulheres que transformaram suas rotinas e carreiras com a mentoria.
+    </p>
+
+    <!-- Cards de Feedback -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Card 1 -->
+      <div class="relative bg-white p-8 rounded-3xl shadow-lg border border-[#D6C48E]/30 hover:shadow-xl transition duration-300">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#D6C48E] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h6m-6 4h8m2 8a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg> -->
+          <img src="img/icons8-qualidade-32.png" alt="verificado">
+        </div>
+        <p class="italic text-gray-700 mt-6">"A mentoria me ajudou a conquistar reconhecimento e segurança no trabalho."</p>
         <p class="mt-4 font-semibold text-[#82466D]">– Ana Souza</p>
       </div>
-      <div class="bg-indigo-50 p-6 rounded-2xl shadow">
-        <p class="italic text-gray-700">"Hoje sou mais organizada e confiante. Essa experiência transformou minha rotina."</p>
+
+      <!-- Card 2 -->
+      <div class="relative bg-white p-8 rounded-3xl shadow-lg border border-[#D6C48E]/30 hover:shadow-xl transition duration-300">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#D6C48E] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-4.596 2.65A1 1 0 019 12.932V7.068a1 1 0 011.156-.986l4.596 2.65a1 1 0 010 1.736z" />
+          </svg> -->
+          <img src="img/icons8-qualidade-32.png" alt="verificado">
+        </div>
+        <p class="italic text-gray-700 mt-6">"Hoje sou mais organizada e confiante. Essa experiência transformou minha rotina."</p>
         <p class="mt-4 font-semibold text-[#82466D]">– Carla Mendes</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Contato -->
   <section id="contato" class="text-white py-20 px-6 text-center fade-in" style="background: linear-gradient(to bottom, #82466D, #50253f);">
@@ -330,20 +379,7 @@
     </div>
   </footer>
 
-  <script>
-    // Menu mobile
-    const btn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-    // Animações suaves com IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  <script src="script.js">
   </script>
 
 </body>

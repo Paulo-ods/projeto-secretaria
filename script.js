@@ -4,12 +4,7 @@
       this.reset();
     });
 
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
 
-    menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-    });
 
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('btnLerMais');
@@ -39,3 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+    // Menu mobile
+    const btn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Animações suaves com IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
