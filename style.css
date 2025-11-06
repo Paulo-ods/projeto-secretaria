@@ -1,0 +1,9 @@
+
+  /* Hexágono estilo colmeia */
+  .clip-hex {
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  }
+
+      html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
