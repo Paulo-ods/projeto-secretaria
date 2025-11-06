@@ -4,12 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentoria para Secretárias | Taynara Mentora</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-  </style>
 </head>
 <body class="font-sans text-gray-800">
   
@@ -17,7 +13,7 @@
   <nav class="w-full bg-white/90 backdrop-blur-md shadow-md fixed top-0 left-0 z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
       <div class="flex items-center space-x-2">
-        <img src="img/logo-abelha-TR-2025[1].png" alt="Logo da Mentora" class="w-10 h-10 rounded-full">
+        <a href="#top"><img src="img/logo-abelha-TR-2025[1].png" alt="Logo da Mentora" class="w-10 h-10 rounded-full"></a>
         <span class="font-bold text-xl text-[#82466D]">Mentoria Taynara</span>
       </div>
 
@@ -49,18 +45,33 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="text-white py-24 px-6 text-center bg-cover bg-center flex flex-col md:flex-row justify-center items-center"
-    style="background: linear-gradient(to bottom, #82466D, #5c2f4b); margin-top:70px;">
-    <div class="m-auto fade-in">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforme sua carreira de secretária</h1>
-      <p class="text-lg mb-6">Mentoria personalizada com Taynara para desenvolver habilidades e alcançar novos resultados</p>
-      <a href="#contato" class="bg-white text-[#82466D] font-semibold px-8 py-3 rounded-full shadow hover:bg-gray-100 transition">Quero ser mentorada</a>
-    </div>
-    <div class="mx-auto mt-8 md:mt-0 fade-in">
-      <img src="img/logo-abelha-TR-2025[1].png" alt="abelha" class="w-48 md:w-64">
-    </div>
-  </header>
+<!-- Hero -->
+<header class="text-white py-24 px-6 text-center bg-cover bg-center flex flex-col md:flex-row justify-center items-center"
+  style="background: linear-gradient(to bottom, #82466D, #5c2f4b); margin-top:70px;">
+  
+  <div class="m-auto fade-in w-[90vw] md:w-[62vw]">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Equipes fortes não nascem prontas. São construídas.</h1>
+
+    <!-- Texto resumido (visível só no mobile) -->
+    <p class="text-base mb-6 md:hidden">
+      O trabalho precisa de presença e propósito. Eu ajudo a alinhar mentalidade e comportamento para gerar satisfação e crescimento real.
+    </p>
+
+    <!-- Texto completo (visível só no desktop) -->
+    <p class="hidden md:block text-lg mb-6">
+      O trabalho, que ocupa a maior parte do nosso tempo, precisa de presença e sentido. Eu atuo alinhando mentalidade e comportamento, transformando a rotina em satisfação e criando estruturas que mudam padrões para gerar recompensas reais: dinheiro, prosperidade e crescimento.
+    </p>
+
+    <a href="#contato" class="bg-white text-[#82466D] font-semibold px-8 py-3 rounded-full shadow hover:bg-gray-100 transition">
+      Quero ser mentorada
+    </a>
+  </div>
+
+  <div class="mx-auto mt-8 md:mt-0 fade-in">
+    <img src="img/logo-abelha-TR-2025[1].png" alt="abelha" class="w-40 md:w-64">
+  </div>
+</header>
+
 
   <!-- Sobre -->
   <section id="sobre" class="py-20 px-6 md:px-20 text-center fade-in">
@@ -72,23 +83,55 @@
   </section>
 
   <!-- Para quem é -->
-  <section id="paraquem" class="bg-gray-50 py-20 px-6 md:px-20 fade-in">
-    <h2 class="text-3xl font-bold text-center mb-10 text-[#82466D]">Para quem é essa mentoria</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="font-semibold text-xl mb-2">Secretárias iniciantes</h3>
-        <p class="text-gray-600">Que desejam entender as boas práticas e construir uma base sólida para crescer com confiança.</p>
+<!-- Para quem é essa mentoria -->
+<section id="paraquem" class="bg-[#faf8f5] py-20 px-6 md:px-20 fade-in">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#82466D] mb-4">
+      Para quem é essa mentoria
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      A mentoria foi criada para diferentes perfis de profissionais que desejam crescer, se destacar e conquistar resultados reais.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-center">
+    
+    <!-- Card 1 -->
+    <div class="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#d8c48c] hover:-translate-y-2">
+      <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#d8c48c] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-xl font-bold">
+        1
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="font-semibold text-xl mb-2">Profissionais experientes</h3>
-        <p class="text-gray-600">Que querem reposicionar sua imagem, aperfeiçoar processos e alcançar cargos de maior destaque.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="font-semibold text-xl mb-2">Empresas e líderes</h3>
-        <p class="text-gray-600">Que buscam treinar suas equipes administrativas com técnicas modernas de organização e gestão.</p>
-      </div>
+      <h3 class="mt-6 text-xl font-semibold text-[#82466D]">Secretárias iniciantes</h3>
+      <p class="text-gray-600 mt-3">
+        Que desejam entender as boas práticas, desenvolver postura profissional e construir uma base sólida para crescer com confiança.
+      </p>
     </div>
-  </section>
+
+    <!-- Card 2 -->
+    <div class="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#d8c48c] hover:-translate-y-2">
+      <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#d8c48c] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-xl font-bold">
+        2
+      </div>
+      <h3 class="mt-6 text-xl font-semibold text-[#82466D]">Profissionais experientes</h3>
+      <p class="text-gray-600 mt-3">
+        Que querem reposicionar sua imagem, aperfeiçoar processos e conquistar cargos de maior destaque no mercado.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#d8c48c] hover:-translate-y-2">
+      <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#d8c48c] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-xl font-bold">
+        3
+      </div>
+      <h3 class="mt-6 text-xl font-semibold text-[#82466D]">Empresas e líderes</h3>
+      <p class="text-gray-600 mt-3">
+        Que buscam desenvolver e treinar suas equipes administrativas com técnicas modernas de organização e gestão eficaz.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Conteúdo -->
 <!-- Conteúdo / Aprendizado -->
@@ -150,59 +193,103 @@
 </section>
 
 
-  <!-- Certificações -->
-  <section class="bg-gradient-to-b from-[#f9f6f7] to-[#e8d9e0] py-16 px-6 md:px-20 text-center fade-in">
-    <h2 class="text-3xl font-bold mb-10 text-[#82466D]">Certificações e Parcerias</h2>
-    <div class="flex flex-wrap justify-center items-center gap-8 opacity-80">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_UNESP.svg" class="h-10" alt="Parceiro 1">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Logo_Sebrae.svg" class="h-10" alt="Parceiro 2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Faesa_logo.png" class="h-10" alt="Parceiro 3">
-    </div>
-  </section>
+<!-- Treinamento para Secretárias -->
+<section id="treinamento" class="py-20 px-6 md:px-20 bg-gradient-to-b from-[#f9f6f7] to-[#e8d9e0] fade-in">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-[#82466D]">Treinamento para Secretárias</h2>
+    <p class="text-gray-700 mb-8 leading-relaxed">
+      O <strong>Treinamento para Secretárias</strong> é uma experiência prática que une consultoria e desenvolvimento humano.  
+      Ele ajuda equipes a oferecer um atendimento diferenciado, melhora a sinergia entre os profissionais e dá aos líderes clareza sobre o processo de evolução.
+    </p>
+    <p class="text-gray-700 mb-8 leading-relaxed">
+      A metodologia é <strong>personalizada</strong> — cada secretária é vista em sua individualidade, explorando suas forças e aprimorando suas lacunas.  
+      Trabalhamos <strong>mentalidade, propósito e comunicação</strong>, estimulando a sensação de pertencimento e crescimento mútuo dentro da equipe.
+    </p>
+    <p class="text-gray-700 mb-10 leading-relaxed">
+      Durante o treinamento, abordamos temas como <strong>postura profissional, persuasão no atendimento, organização e resolução de problemas</strong>,  
+      além de estratégias práticas de captação de pacientes e melhoria do fluxo de trabalho.
+    </p>
 
-  <!-- Como Funciona a Mentoria -->
-<section class="py-20 px-6 md:px-20 bg-gradient-to-b from-[#fdf9fb] to-[#f5e6ee] text-center relative overflow-hidden">
-  <h2 class="text-3xl font-bold mb-12 text-[#82466D]">Como funciona a mentoria</h2>
-  
-  <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-10 relative">
-    
-    <!-- Linha de progresso (aparece só em telas grandes) -->
-    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-[#e5cadd] transform -translate-y-1/2 z-0"></div>
-    
-    <!-- Etapa 1 -->
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto mb-4 bg-[#82466D] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
-        1
+    <!-- Destaques visuais -->
+    <div class="grid md:grid-cols-3 gap-8 text-left text-gray-700">
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h3 class="font-semibold text-xl mb-3 text-[#82466D]">Abordagem Humana</h3>
+        <p>Antes de qualquer ação, entendemos o cenário, ouvimos líderes e criamos um plano que valoriza as pessoas e o propósito da equipe.</p>
       </div>
-      <h3 class="text-xl font-semibold mb-2">Inscrição</h3>
-      <p class="text-gray-600">Você preenche o formulário e garante sua vaga na próxima turma.</p>
-    </div>
 
-    <!-- Etapa 2 -->
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto mb-4 bg-[#9e5d87] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
-        2
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h3 class="font-semibold text-xl mb-3 text-[#82466D]">Metodologia Prática</h3>
+        <p>Aplicamos técnicas que conectam comportamento, comunicação e estrutura, com foco em resultados reais no dia a dia.</p>
       </div>
-      <h3 class="text-xl font-semibold mb-2">Diagnóstico</h3>
-      <p class="text-gray-600">Taynara faz uma análise personalizada do seu momento profissional.</p>
+
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h3 class="font-semibold text-xl mb-3 text-[#82466D]">Crescimento Coletivo</h3>
+        <p>O objetivo é gerar avanço para todos — estimulando reconhecimento, engajamento e senso de propósito em toda a equipe.</p>
+      </div>
     </div>
 
-    <!-- Etapa 3 -->
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto mb-4 bg-[#b775a1] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
-        3
-      </div>
-      <h3 class="text-xl font-semibold mb-2">Encontros</h3>
-      <p class="text-gray-600">Mentorias ao vivo e atividades práticas para desenvolver suas habilidades.</p>
-    </div>
+<div class="mt-12 flex justify-center">
+  <a href="#contato"
+     class="bg-[#82466D] text-white font-semibold px-8 py-4 rounded-full shadow hover:bg-[#5c2f4b] transition text-center 
+            text-sm sm:text-base md:text-lg w-full sm:w-auto max-w-xs sm:max-w-none">
+    Quero saber mais sobre o treinamento
+  </a>
+</div>
 
-    <!-- Etapa 4 -->
-    <div class="relative z-10">
-      <div class="w-16 h-16 mx-auto mb-4 bg-[#d48fc0] text-white flex items-center justify-center rounded-full text-2xl font-bold shadow-lg">
-        4
+  </div>
+</section>
+
+
+<!-- COMO FUNCIONA A MENTORIA -->
+<section id="como-funciona" class="py-20 px-6 md:px-20 bg-gradient-to-b from-white to-[#f9f0f6] text-center">
+  <h2 class="text-3xl font-bold mb-10 text-[#82466D]">Como funciona a mentoria</h2>
+
+  <p class="text-gray-600 max-w-3xl mx-auto mb-12 hidden md:block">
+    O programa foi criado para guiar você passo a passo em um processo prático e inspirador.
+    Cada etapa foi pensada para que secretárias possam aplicar imediatamente o que aprendem — 
+    transformando hábitos, comunicação e performance profissional.
+  </p>
+
+  <!-- Resumo para MOBILE -->
+  <p id="resumoMobile" class="text-gray-600 max-w-3xl mx-auto mb-6 md:hidden">
+    A mentoria é um processo prático e inspirador, dividido em etapas que ajudam você a evoluir profissionalmente...
+  </p>
+  <button id="btnLerMais" class="md:hidden bg-[#82466D] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#6c3a5a] transition">
+    Ler mais
+  </button>
+
+  <!-- Passo a passo -->
+  <div class="relative mt-16 max-w-5xl mx-auto">
+    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-[#e6cfe0] transform -translate-y-1/2"></div>
+
+    <div class="grid md:grid-cols-4 gap-10">
+      <!-- Passo 1 -->
+      <div class="relative bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#82466D] text-white rounded-full mx-auto mb-4 text-lg font-bold">1</div>
+        <h3 class="font-semibold text-xl mb-2">Diagnóstico</h3>
+        <p class="text-gray-600 text-sm">Entendemos seu perfil, desafios e objetivos profissionais para criar um plano personalizado.</p>
       </div>
-      <h3 class="text-xl font-semibold mb-2">Transformação</h3>
-      <p class="text-gray-600">Ao final, você estará pronta para se destacar e conquistar novas oportunidades.</p>
+
+      <!-- Passo 2 -->
+      <div class="relative bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#82466D] text-white rounded-full mx-auto mb-4 text-lg font-bold">2</div>
+        <h3 class="font-semibold text-xl mb-2">Mentorias Semanais</h3>
+        <p class="text-gray-600 text-sm">Encontros com conteúdos estratégicos e exercícios práticos para aplicar no dia a dia.</p>
+      </div>
+
+      <!-- Passo 3 -->
+      <div class="relative bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#82466D] text-white rounded-full mx-auto mb-4 text-lg font-bold">3</div>
+        <h3 class="font-semibold text-xl mb-2">Acompanhamento</h3>
+        <p class="text-gray-600 text-sm">Suporte direto para tirar dúvidas e garantir sua evolução constante durante o processo.</p>
+      </div>
+
+      <!-- Passo 4 -->
+      <div class="relative bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition-all duration-300">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#82466D] text-white rounded-full mx-auto mb-4 text-lg font-bold">4</div>
+        <h3 class="font-semibold text-xl mb-2">Resultados</h3>
+        <p class="text-gray-600 text-sm">Ao final, você conquista mais confiança, clareza e reconhecimento na sua carreira.</p>
+      </div>
     </div>
   </div>
 </section>
