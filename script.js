@@ -1,8 +1,84 @@
-    document.getElementById("leadForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("Obrigada por se inscrever! Entraremos em contato em breve.");
-      this.reset();
-    });
+document.getElementById("leadForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const mensagem = document.getElementById("mensagem").value.trim();
+
+  const button = document.getElementById("formButton");
+  const originalHTML = button.innerHTML;
+
+  // Loading visual
+  button.disabled = true;
+  button.innerHTML = `
+    <div class="loading-icon"></div>
+    Enviando...
+  `;
+
+  // Detecta cidade via API
+  let cidade = "Não identificado";
+  try {
+    const resp = await fetch("https://ipapi.co/json/");
+    if (resp.ok) {
+      const data = await resp.json();
+      cidade = data.city || "Não identificado";
+    }
+  } catch (err) {
+    console.warn("Não foi possível obter a cidade");
+  }
+
+  // Espera um pouquinho pra animação
+  setTimeout(() => {
+
+    // Tag fixa (pode alterar)
+   // const campanha = "Lead do site – Campanha X";
+
+    // Monta a mensagem
+    const texto = encodeURIComponent(
+      `📨 *Novo Lead Recebido*\n\n` +
+      `👤 Nome: ${nome}\n` +
+      `📧 E-mail: ${email}\n` +
+      `📍 Cidade: ${cidade}\n\n` +
+      `📝 Mensagem:\n${mensagem}`
+    );
+
+    const numero = "5546988192326";
+
+    // Detecta se é mobile
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    let url;
+
+    if (isMobile) {
+      // Abre app do WhatsApp
+      url = `https://wa.me/${numero}?text=${texto}`;
+    } else {
+      // Abre versão Web
+      url = `https://web.whatsapp.com/send?phone=${numero}&text=${texto}`;
+    }
+
+    // Abre WhatsApp
+    window.open(url, "_blank");
+
+    // Feedback visual
+    button.innerHTML = "✨ Enviado!";
+    button.classList.remove("bg-[#82466D]");
+    button.classList.add("bg-green-600");
+
+    document.getElementById("leadForm").reset();
+
+    setTimeout(() => {
+      button.disabled = false;
+      button.classList.remove("bg-green-600");
+      button.classList.add("bg-[#82466D]");
+      button.innerHTML = originalHTML;
+    }, 2000);
+
+  }, 1200);
+});
+
+
+
 
 
 
