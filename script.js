@@ -15,7 +15,7 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
     Enviando...
   `;
 
-  // Detecta cidade via API
+  // Detectar cidade
   let cidade = "Não identificado";
   try {
     const resp = await fetch("https://ipapi.co/json/");
@@ -23,44 +23,29 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
       const data = await resp.json();
       cidade = data.city || "Não identificado";
     }
-  } catch (err) {
-    console.warn("Não foi possível obter a cidade");
-  }
+  } catch {}
 
-  // Espera um pouquinho pra animação
+  // Montar mensagem
+  const texto = encodeURIComponent(
+    `📨 *Novo Lead Recebido*\n\n` +
+    `👤 Nome: ${nome}\n` +
+    `📧 E-mail: ${email}\n` +
+    `📍 Cidade: ${cidade}\n\n` +
+    `📝 Mensagem:\n${mensagem}`
+  );
+
+  const numero = "5546988192326";
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  const url = isMobile
+    ? `https://wa.me/${numero}?text=${texto}`
+    : `https://web.whatsapp.com/send?phone=${numero}&text=${texto}`;
+
+  // ⚠ ABRIR AQUI, DIRETO NO CLIQUE – COMPATÍVEL COM IPHONE
+  window.location.href = url;
+
+  // feedback visual
   setTimeout(() => {
-
-    // Tag fixa (pode alterar)
-   // const campanha = "Lead do site – Campanha X";
-
-    // Monta a mensagem
-    const texto = encodeURIComponent(
-      `📨 *Novo Lead Recebido*\n\n` +
-      `👤 Nome: ${nome}\n` +
-      `📧 E-mail: ${email}\n` +
-      `📍 Cidade: ${cidade}\n\n` +
-      `📝 Mensagem:\n${mensagem}`
-    );
-
-    const numero = "5546988192326";
-
-    // Detecta se é mobile
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-    let url;
-
-    if (isMobile) {
-      // Abre app do WhatsApp
-      url = `https://wa.me/${numero}?text=${texto}`;
-    } else {
-      // Abre versão Web
-      url = `https://web.whatsapp.com/send?phone=${numero}&text=${texto}`;
-    }
-
-    // Abre WhatsApp
-    window.open(url, "_blank");
-
-    // Feedback visual
     button.innerHTML = "✨ Enviado!";
     button.classList.remove("bg-[#82466D]");
     button.classList.add("bg-green-600");
@@ -74,42 +59,9 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
       button.innerHTML = originalHTML;
     }, 2000);
 
-  }, 1200);
+  }, 800);
 });
 
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('btnLerMais');
-  const resumo = document.getElementById('resumoMobile');
-
-  // Se qualquer um não existir (ex.: em desktop), aborta sem erro
-  if (!btn || !resumo) return;
-
-  btn.addEventListener('click', () => {
-    // Texto completo (pode ajustar)
-    const full = "O programa foi criado para guiar você passo a passo em um processo prático e inspirador. Cada etapa foi pensada para que secretárias possam aplicar imediatamente o que aprendem — transformando hábitos, comunicação e performance profissional.";
-
-    // Troca o texto e remove o botão (ou esconda)
-    resumo.innerText = full;
-    btn.classList.add('hidden');
-
-    // Opcional: animação de expansão (suave)
-    resumo.style.transition = 'max-height 0.45s ease, opacity 0.35s ease';
-    resumo.style.overflow = 'hidden';
-    resumo.style.opacity = '0';
-    resumo.style.maxHeight = '0px';
-
-    // força repaint antes de abrir
-    requestAnimationFrame(() => {
-      resumo.style.opacity = '1';
-      resumo.style.maxHeight = '400px'; // ajustar conforme texto
-    });
-  });
-});
 
 
     // Menu mobile
