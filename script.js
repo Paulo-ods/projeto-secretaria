@@ -42,7 +42,8 @@ document.getElementById("leadForm").addEventListener("submit", async function(e)
     : `https://web.whatsapp.com/send?phone=${numero}&text=${texto}`;
 
   // ⚠ ABRIR AQUI, DIRETO NO CLIQUE – COMPATÍVEL COM IPHONE
-  window.location.href = url;
+  window.open(url, "_self");
+
 
   // feedback visual
   setTimeout(() => {
