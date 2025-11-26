@@ -396,44 +396,78 @@
   <!-- linha decorativa dourada -->
   <div class="w-20 h-1 bg-[#D4C28A] mx-auto mb-6 rounded-full"></div>
 
-  <p class="mb-12 text-lg opacity-90">
+  <p class="mb-12 text-lg opacity-90 max-w-2xl mx-auto">
     Preencha o formulário abaixo e dê início à sua transformação profissional.
   </p>
 
- <form id="leadForm" 
-  class="max-w-lg mx-auto bg-white text-gray-800 p-8 rounded-3xl shadow-xl border border-[#d6c698] relative animate-fade-in">
+  <!-- GRID — Form + Foto lado a lado -->
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
-  <!-- detalhe dourado superior -->
-  <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D4C28A] text-white px-4 py-1 rounded-full text-sm font-semibold shadow">
-    ✨ Contato
+    <!-- FORM -->
+    <form id="leadForm" 
+      class="bg-white text-gray-800 p-8 rounded-3xl shadow-xl border border-[#d6c698] relative animate-fade-in mx-auto w-full max-w-lg">
+
+      <!-- detalhe dourado superior -->
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D4C28A] text-white px-4 py-1 rounded-full text-sm font-semibold shadow">
+        ✨ Contato
+      </div>
+
+            <!-- Etiqueta dourada -->
+      <!-- <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D4C28A] text-white px-4 py-1 my-2 rounded-full text-sm font-semibold shadow">
+        Envie-nos uma mensagem
+      </div> -->
+
+      <!-- Campo Nome -->
+      <div class="relative mb-6 input-group">
+        <input type="text" required class="input-effect peer" id="nome">
+        <label class="input-label">Seu nome</label>
+      </div>
+
+      <!-- E-mail -->
+      <div class="relative mb-6 input-group">
+        <input type="email" required autocomplete="email" id="email" class="input-effect peer">
+        <label class="input-label">Seu e-mail</label>
+      </div>
+
+      <!-- Mensagem -->
+      <div class="relative mb-6 input-group">
+        <textarea required class="input-effect h-28 resize-none peer" id="mensagem"></textarea>
+        <label class="input-label">Sua mensagem</label>
+      </div>
+
+      <!-- Botão -->
+      <button id="formButton" type="submit"  
+        class="w-full bg-[#82466D] text-white font-semibold py-3 rounded-full hover:bg-[#5c2f4b] transition flex items-center justify-center gap-2">
+        <img src="img/icons8-qualidade-32.png" class="invert brightness-0 w-5">
+        Quero participar
+      </button>
+
+    </form>
+
+    <!-- IMAGEM (Mostra só em telas médias+) -->
+    <div class="flex flex-col items-center  text-center md:text-left">
+
+      <img
+        src="img/secretaria rodape.jpg"
+        alt="Atendimento profissional"
+        class="rounded-3xl shadow-xl w-full object-cover"
+      >
+
+      <!-- Texto abaixo, alinhado ao formulário -->
+      <p class="mt-4 text-white text-sm md:text-base opacity-90 text-center" >
+        Se preferir, entre em contato conosco pelo e-mail:<br>
+        <span class="font-bold text-[#D4C28A]">taynara@mentoria.com</span>
+      </p>
+
+    </div>
+
+  </div>
+    
+
   </div>
 
-  <!-- Campo Nome -->
-  <div class="relative mb-6 input-group">
-    <input type="text" required class="input-effect peer" id="nome">
-    <label class="input-label">Seu nome</label>
-  </div>
+</section>
 
-  <!-- E-mail -->
-  <div class="relative mb-6 input-group">
-    <input type="email" required autocomplete="email" id="email" class="input-effect peer">
-    <label class="input-label">Seu e-mail</label>
-  </div>
-
-  <!-- Mensagem -->
-  <div class="relative mb-6 input-group">
-    <textarea required class="input-effect h-28 resize-none peer" id="mensagem"></textarea>
-    <label class="input-label">Sua mensagem</label>
-  </div>
-
-  <!-- Botão -->
-<button id="formButton" type="submit"  
-  class="w-full bg-[#82466D] text-white font-semibold py-3 rounded-full hover:bg-[#5c2f4b] transition flex items-center justify-center gap-2">
-  <img src="img/icons8-qualidade-32.png" class="invert brightness-0 w-5">
-  Quero participar
-</button>
-
-</form>
 
 
 
